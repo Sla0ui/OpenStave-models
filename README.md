@@ -9,3 +9,8 @@ Each release holds one model set as zip files. The app checks every file against
 | `set-426` | `segnet_308` (page segmentation), `encoder` and `decoder` run 426 (staff transcription), ONNX |
 
 Distributed for use with the OpenStave app.
+
+## Verovio source
+
+The app engraves scores with Verovio (LGPL-3.0), built with one change. [`verovio/`](verovio) holds that change,
+the build script and how to rebuild it; the `verovio-6.3.0` release holds the full source archive.

@@ -1,0 +1,18 @@
+--- a/src/expansionmap.cpp
++++ b/src/expansionmap.cpp
+@@ -399,6 +399,7 @@
+                 std::string ref = "#" + this->CreateSection(section, first, last);
+                 expansion->GetPlistInterface()->AddRefAllowDuplicate(ref);
+                 expansion->GetPlistInterface()->AddRefAllowDuplicate(ref);
++                isStartFromPrevious = true;
+             }
+             if (isStartFromPrevious || ExpansionMap::IsRepeatStart(measure)) {
+                 first = current;
+@@ -410,6 +411,7 @@
+                 std::string ref = "#" + this->CreateSection(section, first, last);
+                 expansion->GetPlistInterface()->AddRefAllowDuplicate(ref);
+                 expansion->GetPlistInterface()->AddRefAllowDuplicate(ref);
++                isStartFromPrevious = true;
+             }
+         }
+     }
