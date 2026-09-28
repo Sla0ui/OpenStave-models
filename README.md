@@ -1,8 +1,8 @@
 # OpenStave models
 
-The recognition models that the OpenStave app downloads on first use, after the user agrees. They run entirely on the device; no scan ever leaves the phone.
+The recognition models of the OpenStave app. They run entirely on the device; no scan ever leaves the phone.
 
-Each release holds one model set as zip files. The app checks every file against a SHA-256 checksum built into it and rejects anything else. `SHA256SUMS` lists the checksums of the zips.
+Each release holds one model set as zip files. The app's build fetches them from here, checks every file against the SHA-256 checksums pinned in the app, and ships them inside the app, so the app itself never downloads anything. `SHA256SUMS` lists the checksums of the zips.
 
 | Release | Files |
 |---|---|
@@ -14,3 +14,7 @@ Distributed for use with the OpenStave app.
 
 The app engraves scores with Verovio (LGPL-3.0), built with one change. [`verovio/`](verovio) holds that change,
 the build script and how to rebuild it; the `verovio-6.3.0` release holds the full source archive.
+
+## Privacy policy
+
+The app's privacy policy is served from [`privacy/`](privacy) at https://sla0ui.github.io/OpenStave-models/privacy/.
